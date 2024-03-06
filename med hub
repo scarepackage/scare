@@ -1,0 +1,73 @@
+import os
+import time
+from typing import Counter
+while True:
+  print("hello this is a medical hub system")
+  print("I am learning python")
+
+  MYinput = input('enter patient\'s first name: ')
+
+  def clearscreen():
+    os.system('clear')
+
+  def myfunction(a, b):
+    print("select option")
+    print(a)
+    print(b)
+    return a + b
+
+  patients = {
+      "isaac": 80,
+      "nathan": 100,
+      "joe": 40,
+      "hello": ":)",
+  }
+  bp = {
+      "isaac": 60,
+      "nathan": 90,
+      "joe": 10,
+  }
+
+  list = ["Age: ", "Weight:"]
+
+  print(list[0])
+  print(list[1])
+
+  if MYinput == "nathan":
+    patient_bpm = patients["nathan"]
+    patient_bp = bp["nathan"]
+    print("Nathan's vitals are stable")
+  myfunction(
+      'check heart rate<',
+      'check blood presure',
+  )
+  if MYinput == "isaac":
+    print(":Isaac's vitals are low:")
+    patient_bpm = patients["isaac"]
+    patient_bp = bp["isaac"]
+  if MYinput == "joe":
+    print(":Joe's is on the verge of dying:")
+    patient_bpm = patients["joe"]
+    patient_bp = bp["joe"]
+  if MYinput == "hello":
+    print("hello user")
+    time.sleep(3)
+    clearscreen()
+  if MYinput == "exit":
+    clearscreen()
+  MYinput = input('y/n: ')
+  if MYinput == "y":
+    print(f'BPM: {patient_bpm}')
+    print(":check blood presure<")
+  if MYinput == "n":
+    print(":check blood presure<")
+  MYinput = input('y/n: ')
+  if MYinput == "y":
+    print(f'mmGh: {patient_bp}')
+    print(":Check Up Complete:")
+    time.sleep(6)
+    clearscreen()
+  if MYinput == "clear":
+    clearscreen()
+  if MYinput == "n":
+    clearscreen()
